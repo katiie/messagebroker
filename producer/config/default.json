@@ -1,0 +1,5 @@
+{
+    "broker": {
+        "appurl": "http://localhost:8083"
+    }
+}
