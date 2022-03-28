@@ -2,7 +2,7 @@ import * as mongoDB from "mongodb";
 import boxen from "boxen";
 import config from "config";
 
-const dbConfig = config.get('dbConfig') as any;
+const dbConfig = config.get('MongoDbConfig') as any;
 export class DatabaseService {
 
     static db?: mongoDB.Db = null;
@@ -17,7 +17,7 @@ export class DatabaseService {
                 serverSelectionTimeoutMS: dbConfig['CONNECTION_TIMEOUT_MS'],
             });
 
-            await client.connect().then(dbc => {
+            await client.connect().then(() => {
                 console.log(boxen(`Successfully connected to mongo db`));
             })
                 .catch(err => {

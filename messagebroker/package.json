@@ -34,6 +34,7 @@
     "@types/mongodb": "^4.0.7",
     "boxen": "^5.0.1",
     "config": "^3.3.7",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "jest": "^27.2.5",
     "mongo-mock": "^4.1.0",

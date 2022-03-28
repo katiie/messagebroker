@@ -10,7 +10,7 @@ describe('insert', () => {
 
     const mongod = await MongoMemoryServer.create();
     const uri = mongod.getUri();
-    const conn = await databaseService.connectToDatabase(uri,"test");
+    await databaseService.connectToDatabase(uri,"test");
   });
 
   afterAll(async () => {

@@ -8,14 +8,14 @@ There are three projects in this repo:
       "topic": "topic name",
       "message": "any value"
      }`
-  
+     ![Design Diagram](https://github.com/katiie/messagebroker/blob/development/messagebroker.png)
 2)  The consumer project to test the messagebroker `subscribe` endpoint
 3)  The publisher project to test the messagebroker `publish` enpoint
 
 To run the messagebroker project:
 1)  clone the app
 2)  duplicate `test` file in config folder and rename it to `default.config`
-3)  replace connection string in `default.config` file to a valid mongodb connection string
+3)  Create an .env file and DB_MONGODBURL and DB_DATABASENAME with values specified
 4)  run `npm install` on your cli to install the necessary packages
 5)  run `npm run start` to start the server
 6)  happy testing

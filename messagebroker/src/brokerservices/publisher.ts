@@ -2,9 +2,9 @@
  * publisher
  */
 
-import boxen from "boxen";
-import { MessageDTO } from "../ViewModel/messageDTO";
-import { DatabaseService } from "../datacontext/database.service";
+import boxen from 'boxen';
+import { MessageDTO } from '../ViewModel/messageDTO';
+import { DatabaseService } from '../datacontext/database.service';
 
 const databaseService = new DatabaseService();
 
@@ -26,7 +26,7 @@ export class Publisher {
         }
         catch (e) {
 
-            console.log(boxen("Publishing error", { borderColor: "red" }), e);
+            console.log(boxen('Publishing error', { borderColor: 'red' }), e);
         }
     }
 
