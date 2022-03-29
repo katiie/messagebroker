@@ -1,9 +1,8 @@
-import config from "config";
-import axios from "axios";
+import 'dotenv/config'
+import axios from 'axios';
 import boxen from 'boxen';
 
-const brokerDetail = config.get('broker') as any;
-const url = brokerDetail["appurl"];
+const url =  process.env.MESSAGE_BROKER_URL;
 
 export const getMessage = async (topic: string) => {
 
@@ -14,8 +13,9 @@ export const getMessage = async (topic: string) => {
                 "Content-type": "application/json; charset=UTF-8"
             }
         })
+        
             .then(response => {
-                if (response?.status !== 200) {
+                if (!response || response?.status !== 200) {
                     console.error(boxen('service unreachable'));
                 }
                 else {

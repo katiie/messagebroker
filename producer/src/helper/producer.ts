@@ -1,13 +1,12 @@
-import config from "config";
-import axios from "axios";
+import 'dotenv/config'
+import axios from 'axios';
 import boxen from 'boxen';
 
-const brokerDetail = config.get('broker') as any;
-const url = brokerDetail["appurl"];
-
+const url =  process.env.MESSAGE_BROKER_URL;
 export const saveMessage = async (topic: string) => {
 
     try {
+        console.log(`${url}/publish :${topic}`);
         const payload = { message: `Sent from ${topic}: ${Date()}`, topic: topic }
 
         const response = await axios.post(`${url}/publish`, payload);

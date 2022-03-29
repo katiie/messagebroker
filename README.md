@@ -33,3 +33,10 @@ To run the consumer project:
 3)  replace the endpoint in `default.config` with the messagebroker endpoint
 4)  run `npm run start` to start the server 
 5)  the code is configured to consume some messages from some default topics
+
+
+To run the project with Docker:
+1) ensure you have docker desktop installed.
+2) open command prompt and navigate to the project directory. please ensure the directory has `docker-compose.yml` file
+3) run `docker-compose up --build` (This command will build and run all the containers in Docker.)
+4) check your docker deskop for the deployed applications and their respective url

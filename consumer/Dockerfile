@@ -12,5 +12,5 @@ RUN npm install -g typescript
 RUN npm install -g ts-node
 
 RUN npm i
-EXPOSE 4500/tcp
+EXPOSE 4900/tcp
 CMD ["npm", "run", "prod"]

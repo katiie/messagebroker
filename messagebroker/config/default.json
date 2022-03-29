@@ -1,0 +1,10 @@
+{
+    "MongoDbConfig": {
+        "Url": "mongodb+srv://testuser:XdoYteAuXmUyVshg@cluster0.jmqem.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 
+        "DatabaseName": "msgBrk",
+        "cappedCollectionSize": 10,
+        "SOCKET_TIME_OUT_MS": 5000,
+        "CONNECTION_TIMEOUT_MS": 5000
+
+    }
+}

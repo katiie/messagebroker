@@ -18,13 +18,11 @@
     "lint": "eslint . --ext .ts",
     "tsc": "tsc",
     "prestart": "npm run build",
-    "prebuild": "npm run lint",
     "build": "npm-run-all clean tsc",
     "start": "node dist/app.js",
-    "pm2": "pm2 start pm2.yaml",
     "dev:watch": "tsc && nodemon dist/app.js",
-    "dev": "npm-run-all build start",
-    "prod": "NODE_ENV=production npm-run-all build pm2",
+    "dev": "npm-run-all lint build start",
+    "prod": "NODE_ENV=production npm-run-all build start",
     "test": "jest --detectOpenHandles"
   },
   "author": "",
@@ -53,7 +51,7 @@
     "@types/mocha": "^9.1.0",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
-    "eslint": "^8.11.0",
+    "eslint": "^v7.32.0",
     "mongodb-memory-server": "^8.4.1"
   }
 }

@@ -3,7 +3,7 @@
  */
 
 import boxen from 'boxen';
-import { MessageDTO } from '../ViewModel/messageDTO';
+import { MessageDTO } from '../viewmodel/messageDTO';
 import { DatabaseService } from '../datacontext/database.service';
 
 const databaseService = new DatabaseService();
